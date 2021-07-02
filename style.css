@@ -30,6 +30,7 @@ h2 {
 }
 #home{
 	background-color: black;
+  margin-top: 100px;
 }
 /*NAVBAR */
 .nav-link {
@@ -49,7 +50,6 @@ h2 {
   font-size: 30px;
 }
 /* END OF NAVBAR */
-
 
 /* CARROUSEL */
 .carousel {	
@@ -138,6 +138,45 @@ footer a{
 	color : white;
 }
 /* END OF FOOTER */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  /* perspective: 1000px; */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  /* background-color: #bbb; */
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #F2EF00;
+  color: #242A36;
+  transform: rotateY(180deg);
+}
 
 @media (max-width:992px) {
   form input{
@@ -155,11 +194,26 @@ footer a{
     font-size: 15px;
   }
 }
+@media (min-width: 0px) and (max-width : 1290px){
+.flip-card-back{
+  display: none;
+}
+.flip-card:hover .flip-card-inner {
+  transform: none;
+}
+img{
+  height: 225px;
+  width: 350px;
+}
+.flip-card-inner{
+  position:fixed;
+}
+}
 @media all and (min-width: 992px) {
   #goToTop {
     display: none;
     position: fixed;
-    bottom: 50px;
+    bottom: 120px;
     right: 50px;
     z-index: 99;
     font-size: 1rem;
