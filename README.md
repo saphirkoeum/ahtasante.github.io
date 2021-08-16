@@ -3,4 +3,4 @@ Hackathon DesCodeuses 2021 - Céline, Flavie &amp; Saphir
 
 Create a website for an organisation to prevent young mental health
 
-Stack : HTML/CSS/Boostrap
+Stack : HTML/CSS/Boostrap/JS
